@@ -1,0 +1,24 @@
+{
+    "students" : [
+        {
+            "header": "Pedro zijn profiel",
+            "name": "Pedro",
+            "gender": "man"
+        },
+        {
+            "header": "Isabelle haar profiel",
+            "name": "Isabelle",
+            "gender": "vrouw"
+        },
+        {
+            "header": "Steven zijn profiel",
+            "name": "Steven",
+            "gender": "man"
+        },
+        {
+            "header": "Rick zijn profiel",
+            "name": "Rick",
+            "gender": "man"
+        }
+    ]
+}
