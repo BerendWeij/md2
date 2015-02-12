@@ -11,5 +11,10 @@ var page = {
     showButtonText: function()
     {
         console.log(this.elements.startButton.html());
+    },
+
+    update: function()
+    {
+        //.....
     }
 }
