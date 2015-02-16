@@ -11,7 +11,8 @@ $(function() {
 
         // vervolgens loopen we over alle studenten heen om ze te laten zien
         // dit soort loops kunnen ook direct in je HTML door de Array direct te injecteren
-        // in een template. underscore heeft hier standaard opmaak voor
+        // in een template. underscore heeft hier standaard logica voor
+        // dit houdt je logica nog meer gescheiden van de view
         // voor nu loopen we gewoon in JavaScript
         for (student in data.students) {
             content += template(data.students[student]); // underscore injecteert je data in de template
