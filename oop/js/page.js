@@ -4,13 +4,11 @@
 // we gaan later nog naar closures kijken
 var page = {
 
-    elements: {
-        startButton:$(".button")
-    },
+    startButton:$(".button"),
 
     showButtonText: function()
     {
-        console.log(this.elements.startButton.html());
+        console.log(this.startButton.html());
     },
 
     update: function()
