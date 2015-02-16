@@ -2,8 +2,8 @@
 // $() is een shortcut voor $( document ).ready()
 $(function() {
 
-    var templateText    =   $('#profileTemplate').html(), // we halen de template op uit de HTML
-        demoTemplate    =   _.template(templateText); // vervolgens laten we underscore deze HTML parsen als template
+    var templateHTML    =   $('#profileTemplate').html(), // we halen de template op uit de HTML
+        template        =   _.template(templateHTML); // vervolgens laten we underscore deze HTML parsen als template
 
     function updateView(data)
     {
@@ -14,10 +14,10 @@ $(function() {
         // in een template. underscore heeft hier standaard opmaak voor
         // voor nu loopen we gewoon in JavaScript
         for (student in data.students) {
-            content += demoTemplate(data.students[student]);
+            content += template(data.students[student]); // underscore injecteert je data in de template
         }
 
-        $("#profileBlock").html(content);
+        $("#profileBlock").html(content); // we laten de gegenereerde HTML in de div #profileBlock zien
     }
 
     // met ajax halen we de json op voor wat data
