@@ -4,6 +4,17 @@ var Question = function()
     // als we een nieuwe question aanmaken dan gaat automatisch deze functie af
     // hier kunnen we mooi de 'begin' settings instellen
 
+    // property aangemaakt binnen de constructor
+    // hierdoor is het een 'eigen' property en niet 1 die wordt inherited
+    this.spacing = 5;
+
+    // functie aangemaakt binnen de constructor
+    // hierdoor is het een 'eigen' functie/object/property
+    this.getSpacing = function()
+    {
+        console.log(this.spacing);
+    }
+
 }
 // ooit gehoord van 'pass by reference & pass by value'?
 //Question.fn = Question.prototype;
@@ -18,7 +29,7 @@ Question.maxQuestions = 10;
 // Dit is een instance property
 // elke instantie heeft zijn eigen 'label'
 // deze zijn helaas public (we hebben liever geen public properties wegens encapsulation)
-Question.prototype.label = "undefined";
+Question.prototype.label = "default value";
 
 // dit is een 'instance' method
 // deze functie roep je aan op een question instantie
