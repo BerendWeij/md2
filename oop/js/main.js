@@ -66,5 +66,12 @@ $(function() {
     console.log(berend.getAgeInMonths());
     */
 
-    
+    var testModel = new Model();
+    testModel.set(0, "media development");
+    testModel.set(1, "Mediacollege");
+
+    var users = new Users();
+    users.set(0, "eerste waarde");
+    users.set(1, "tweede waarde");
+
 });
