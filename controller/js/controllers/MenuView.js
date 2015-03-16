@@ -1,9 +1,3 @@
-// we maken een nieuw Controller object aan
-// Wat stoppen we in MenuView? De constructor functie die Controller.create() returned
-// Wat is die constructor? Dat is een standaard Controller constructor, maar dan met
-// extra eigen MenuView properties die we doorgeven in Controller.create()
-// dus in dit geval een gevulde elements, events, een lege init functie en een
-// eigen 'start' functie
 var MenuView = Controller.create({
     // we vullen het object elements met een aantal referenties waar we graag
     // toegang tot zouden willen hebben. Dit maakt je code een stuk leesbaarder dan steeds zelf

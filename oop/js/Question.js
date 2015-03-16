@@ -37,3 +37,4 @@ Question.prototype.setLabel = function(label)
 {
     this.label = label;
 }
+
