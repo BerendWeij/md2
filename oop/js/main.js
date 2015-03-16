@@ -17,7 +17,7 @@ $(function() {
 
     console.log(Question.maxQuestions);
 
-    /*
+
 
     // laten we kijken of de functies verwijzen naar dezelfde functie
     console.log(question1.setLabel === question2.setLabel);
@@ -25,7 +25,7 @@ $(function() {
     // laten we kijken of hun 'getSpacing' gelijk is
     console.log(question1.getSpacing === question2.getSpacing);
 
-    */
+
 
     /*
     var test = {
@@ -74,4 +74,24 @@ $(function() {
     users.set(0, "eerste waarde");
     users.set(1, "tweede waarde");
 
+
+    var user = {
+        name : "Berend",
+        getName: function(){
+            return this.name;
+        }
+    };
+
+    //console.log(user.getName());
+
+    var getNameFunctionReference = user.getName;
+    //console.log(getNameFunctionReference());
+
+    var button = document.querySelector(".button");
+    button.addEventListener("click", function(){
+        question1.getSpacing();
+    });
+
+    var buttons = document.querySelectorAll(".button");
+    buttons.className = "test";
 });

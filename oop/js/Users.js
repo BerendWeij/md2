@@ -3,7 +3,10 @@
 // var users = new Users();
 var Users = function()
 {
-    this.records = [];
+    // we roepen de 'parent' constructor aan
+    // hierdoor wordt this.records aangemaakt
+    Model.call(this);
+
 }
 
 // we zorgen voor een 'prototype' chain door een nieuw object

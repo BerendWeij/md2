@@ -7,6 +7,25 @@ var Model = function()
     this.records = [];
 }
 
+/*
+Model.proxy = function(func){
+    var self = this;
+    return(function(){
+        return func.apply(self, arguments);
+    });
+}
+*/
+
+Model.prototype.proxy = function(func)
+{
+    var self = this;
+    return (
+        function(){
+            return func.apply(self, arguments);
+        }
+    );
+}
+
 // ik maak een standaard functie aan voor alle Models om waardes te zetten
 Model.prototype.set = function(id, value)
 {
