@@ -74,6 +74,11 @@ $(function() {
     users.set(0, "eerste waarde");
     users.set(1, "tweede waarde");
 
+    for(var key in users)
+    {
+        console.log(key + " is dit jouw key? " + users.hasOwnProperty(key));
+    }
+
     var user = {
         name : "Berend",
         getName: function(){
@@ -94,6 +99,8 @@ $(function() {
     var buttons = document.querySelectorAll(".button");
     buttons.className = "test";
 
+    var test = {};
+    var main = Object.getPrototypeOf(test);
 
 });
 
