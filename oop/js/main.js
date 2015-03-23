@@ -74,7 +74,6 @@ $(function() {
     users.set(0, "eerste waarde");
     users.set(1, "tweede waarde");
 
-
     var user = {
         name : "Berend",
         getName: function(){
@@ -94,4 +93,7 @@ $(function() {
 
     var buttons = document.querySelectorAll(".button");
     buttons.className = "test";
+
+
 });
+
