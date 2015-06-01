@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- ng-app is een 'directive'. Directives vertellen Angular dat je een bepaald gedrag wilt toevoegen
+ met ng-app vertellen we welke 'app' dit is en zo koppelen we alle instellingen van md2App -->
+<html ng-app="md2App">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <title>Voorbeeld Mediacollege</title>
+        <link rel="stylesheet" href="style/css/default.css">
+    </head>
+    <body>
+    <!-- met de ng-controller directive koppelen we een container aan een controller
+    met een controller geven we de 'view' toegang tot de 'model'
+
+    Model — Models zijn de properties van een scope
+    View — Je HTML met data bindings
+    Controller — ..
+    Scope
+    -->
+        <div ng-controller="StudentsController">
+
+        </div>
+        <script type="text/javascript" src="lib/angular.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/controllers/ProjectController.js"></script>
+    </body>
+</html>

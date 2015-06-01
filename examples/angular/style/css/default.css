@@ -1,0 +1,8 @@
+input, .data-row {
+  width:400px;
+  padding:5px;
+  box-sizing: border-box;
+}
+
+.data-row:nth-child(even) {background: #CCC}
+.data-row:nth-child(odd) {background: #FFF}
