@@ -1,4 +1,3 @@
-
 var trainStations = new TrainStationsModel(HTTPService);
 trainStations.fetch("http://localhost/js-training/data/trainstations.json");
 

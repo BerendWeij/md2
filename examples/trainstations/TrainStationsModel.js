@@ -28,3 +28,42 @@ TrainStationsModel.prototype.getAll = function() {
     });
     return allStations;
 };
+
+
+// deze functionaliteit zou naar een Model.prototype.getByName mogen (handig voor meer models)
+TrainStationsModel.prototype.getStationsByName = function(qry) {
+    var filtered = this.stations.filter(function(station){
+        return station.name.indexOf(qry) !== -1;
+    });
+    return filtered;
+};
+
+TrainStationsModel.prototype.getStationsByType = function(type) {
+    var filtered = this.stations.filter(function(station){
+        return station.type === type;
+    });
+    return filtered;
+};
+
+// deze functionaliteit zou naar een Model.prototype.getType mogen (handig voor meer models)
+TrainStationsModel.prototype.getTypes = function() {
+    var types = [];
+
+    this.stations.forEach(function(station, index, array) {
+        if(types.indexOf(station.type) === -1){
+            types.push(station.type);
+        }
+    });
+    return types;
+};
+
+TrainStationsModel.prototype.getGPSLocation = function(stationID){
+    var gps,
+        station;
+    if(this.stations[stationID])
+    {
+        station = this.stations[stationID];
+        gps = {geoLong: station.geoLong, geoLat: station.geoLat};
+    }
+    return gps;
+}
