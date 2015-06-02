@@ -2,7 +2,6 @@
     'use strict';
 
     /* App Module */
-
     angular.module('md2App', [
         'md2Controllers'
     ]);

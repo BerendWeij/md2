@@ -9,19 +9,17 @@
 
     function studentController($rootScope, $scope) {
 
-        // 1) MVVM property laten zien
+        // de view heeft ook toegang tot het $scope object
+        // $scope is het centrale object tussen je view (HTML) en je controller
+        $scope.selectedStudent = "";
 
-        // 2) MVVM array laten zien met ng-repeat en $index en .length
+        // we geven het scope object een array met namen
+        $scope.students = ["Mike", "Lien", "Steven", "Isabelle", "Rick"];
 
-        // 3) MVVM ng-model laten zien en waarde laten zien
-
-        // 4) MVVM array filtering laten zien (filters)
-
-        // 5) MVVM array filtering laten zien (filters)
-
-        // 6) mogen ook objecten zijn
-
-        // 7) later meer :) . Sowieso zou de model nog 'losser' mogen. Controller alleen als doorgeef luik.
+        // de HTML mag bij deze functie omdat onze HTML ook bij $scope mag
+        $scope.selectStudent = function(student){
+            $scope.selectedStudent = student;
+        }
 
     }
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- ng-app is een 'directive'. Directives vertellen Angular dat je een bepaald gedrag wilt toevoegen
- met ng-app vertellen we welke 'app' dit is en zo koppelen we alle instellingen van md2App -->
+ met ng-app vertellen we welke 'app' dit is en zo koppelen we alle instellingen van md2App
+ -->
 <html ng-app="md2App">
     <head>
         <meta charset="utf-8" />
@@ -18,7 +19,12 @@
     Scope
     -->
         <div ng-controller="StudentsController">
-
+            <input ng-model="searchQuery">{{searchQuery}}
+            <div class="data-row" ng-repeat="student in students | filter:searchQuery" ng-click="selectStudent(student)">{{$index + 1}} : {{student}}</div>
+            
+            <br/>
+            Er zijn {{students.length}} studenten.<br/>
+            Geselecteerde student: {{selectedStudent}}
         </div>
         <script type="text/javascript" src="lib/angular.js"></script>
         <script src="app/app.js"></script>
