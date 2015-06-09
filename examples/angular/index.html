@@ -20,13 +20,22 @@
     -->
         <div ng-controller="StudentsController">
             <input ng-model="searchQuery">{{searchQuery}}
-            <div class="data-row" ng-repeat="student in students | filter:searchQuery" ng-click="selectStudent(student)">{{$index + 1}} : {{student}}</div>
-            
+            <div class="">
+                <div class="data-row animate" ng-repeat="student in students | filter:searchQuery" ng-click="selectStudent(student)">{{$index + 1}} : {{student.name}}</div>
+            </div>
             <br/>
             Er zijn {{students.length}} studenten.<br/>
             Geselecteerde student: {{selectedStudent}}
+            Vandaag is: {{currentDate | date:'EEEE d MMM yyyy'}}
+
+            <div class="menu animate" ng-show="selectedStudent" ng-class="{isEdit:editMode}">
+                <div ng-click="selectedStudent=''">x</div>
+                Student: <input ng-model="selectedStudent.name">
+                <div ng-click="editMode=!editMode">edit</div>
+            </div>
         </div>
         <script type="text/javascript" src="lib/angular.js"></script>
+        <script type="text/javascript" src="lib/angular-animate.js"></script>
         <script src="app/app.js"></script>
         <script src="app/controllers/ProjectController.js"></script>
     </body>
